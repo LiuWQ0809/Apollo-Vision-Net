@@ -31,6 +31,26 @@ Our Apollo vision Net proposes several works as follows, significantly improving
 - [Visualization](docs/visualization.md)
 - [Run the code](docs/run.md)
 
+# Install
+- [Apollo Doc](https://apollo.baidu.com/docs/apollo/latest/md_docs_2_xE5_xBA_x94_xE7_x94_xA8_xE5_xAE_x9E_xE8_xB7_xB5_2_xE5_xBC_x80_xE5_x8F_x91_xE8_xB0_x83_5caf853ed6f358d869281b4223669771.html)
+
+```
+conda create -n occ python=3.8 -y
+conda activate occ
+conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch
+pip install mmcv-full==1.4.1
+pip install mmdet==2.19.0
+pip install mmsegmentation==0.20.0
+git clone https://github.com/ApolloAuto/Apollo-Vision-Net
+cd Apollo-Vision-Net
+pip install -r requirements.txt
+git clone https://github.com/open-mmlab/mmdetection3d.git
+cd mmdetection3d
+git checkout v0.18.1 # Other versions may not be compatible.
+python setup.py develop
+pip install timm
+```
+
 # Results and Pre-trained Models
 
 | Methods | 3d detection mAP | occupancy miou |
